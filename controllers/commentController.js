@@ -3,7 +3,7 @@ const Post = require("../models/postModel");
 const Comment = require("../models/commentModel");
 
 // business logic
-exports.createComment = async (res,req) =>{
+exports.createComment = async (req,res) =>{
 try{
   // fetch data from request body
   const {post,user,body} = req.body;
@@ -20,7 +20,7 @@ try{
            .populate("comments")  // populate the comments array with comment documents 
            .exec();
 
-   res.json({
+   res.status(200).json({
     post:updatedPost,
    });      
 }   

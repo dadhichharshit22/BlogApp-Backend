@@ -55,7 +55,7 @@ exports.unlikePost = async(req,res)=>{
 
 
 
-// dummy link for testing
-// exports.dummyLink = (req,res) =>{
-//     res.send("This is Your Dummy Page");
-// };
+//dummy link for testing
+exports.dummyLink = (req,res) =>{
+    res.send("This is Your Dummy Page");
+};
